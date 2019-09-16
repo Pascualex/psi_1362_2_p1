@@ -10,6 +10,7 @@
 
 import math
 
+
 # D. verbing
 # Given a string, if its length is at least 3,
 # add 'ing' to its end.
@@ -18,9 +19,9 @@ import math
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    if (len(s) < 3):
+    if len(s) < 3:
         return s
-    if (s.endswith("ing")):
+    if s.endswith("ing"):
         return s + "ly"
     return s + "ing"
 
@@ -36,12 +37,12 @@ def verbing(s):
 def not_bad(s):
     not_pos = s.find("not")
     bad_pos = s.find("bad")
-    
-    if (not_pos == -1 or bad_pos == -1):
+
+    if not_pos == -1 or bad_pos == -1:
         return s
 
-    if (not_pos < bad_pos):
-        return s[0:not_pos] + "good" + s[bad_pos+3:]
+    if not_pos < bad_pos:
+        return s[:not_pos] + "good" + s[bad_pos+3:]
 
     return s
 
@@ -54,7 +55,7 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-    return a[0:math.ceil(len(a)/2)] + b[0:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
+    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
 
 
 # Simple provided test() function used in main() to print
