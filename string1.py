@@ -29,7 +29,7 @@ def donuts(count):
         ret_str += str(count)
     else:
         ret_str += "many"
-         
+
     return ret_str
 
 
